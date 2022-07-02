@@ -1,1 +1,15 @@
-/*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.App-container {
+  background-color: rgb(35, 83, 83);
+}/*# sourceMappingURL=index.css.map */
