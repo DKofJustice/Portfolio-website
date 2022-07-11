@@ -5,13 +5,14 @@ import Footer from 'Page Sections/Footer/Footer';
 import Projects from 'Page Sections/Projects/Projects';
 import Services from 'Page Sections/Services/Services';
 import Skills from 'Page Sections/Skills/Skills';
+import LandingSection from 'Page Sections/Landing Section/LandingSection';
 import React from 'react'
-import Header from '../Page Sections/Header/Header';
 
 export default function Homepage() {
+
   return (
-    <>
-      <Header/>
+    <div className='homepage-menu'>
+      <LandingSection/>
       <AboutSection/>
       <Services/>
       <Skills/>
@@ -19,6 +20,6 @@ export default function Homepage() {
       <Experience/>
       <Projects/>
       <Footer/>
-    </>
+    </div>
   )
 }

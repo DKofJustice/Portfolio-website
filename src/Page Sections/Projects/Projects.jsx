@@ -4,7 +4,7 @@ import CalculatorImage from '../../Assets/Images/c1 1.jpg';
 
 export default function Projects() {
   return (
-    <article className='projects-section'>
+    <article className='projects-section' id='projects-section'>
       <h2>Projects</h2>
 
       <div className='project-list'>

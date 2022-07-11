@@ -4,7 +4,7 @@ import LocationIcon from '../../Assets/Icons/carbon_location-filled.svg';
 
 export default function Experience() {
   return (
-    <div className='work-section'>
+    <div className='work-section' id='work-section'>
       <h2>Work Experience</h2>
 
       <div className='work-list'>

@@ -1,18 +1,72 @@
-@use '../../Styles/utils';
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@use '../../Styles/utils' as *;
+@use '../../Styles/Component Styles/useComponentStyles';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    list-style: none;
+    font-size: 16px;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 h1, h2 {
     font-family: 'Playfair Display', serif;
 }
 
+h1 {
+    font-size: $h1-400;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p, a {
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+/*Arraging the layout and styles of
+project window*/
+
+
 .App-container {
-    background-color: rgb(35, 83, 83);
+    background-color: $primary-color;   
+}
+
+/*Styling the scrollbar*/
+
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2f2f44;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #FF1336;
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: $h1-500;
+    }
+
+    .homepage-menu {
+        padding-left: 20rem;
+    }
 }

@@ -5,7 +5,7 @@ import LinkedinIcon from '../../Assets/Icons/akar-icons_linkedin-box-fill.svg';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id='footer'>
       <h2>Contact</h2>
 
       <h3>Get in touch me with the following contact details</h3>

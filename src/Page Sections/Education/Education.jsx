@@ -3,7 +3,7 @@ import HighschoolIcon from '../../Assets/Icons/icons8_diploma-1.svg';
 
 export default function Education() {
   return (
-    <div className='education-section'>
+    <div className='education-section' id='education-section'>
       <h2>Education</h2>
 
       <div className='education-level'>
