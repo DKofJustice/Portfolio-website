@@ -18,20 +18,24 @@ h1, h2 {
     font-family: 'Playfair Display', serif;
 }
 
+h1, h2, h3, p, a {
+    color: $primary-text-color;
+}
+
 h1 {
     font-size: $h1-400;
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: $h2-400;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: $h3-400;
 }
 
 p, a {
-    font-size: 1.1rem;
+    font-size: $p-400;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-decoration: none;
@@ -62,11 +66,28 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width: 992px) {
+
     h1 {
         font-size: $h1-500;
     }
 
+    h2 {
+        font-size: $h2-500;
+    }
+
+    h3 {
+        font-size: $h3-500;
+    }
+
+    p, a {
+        font-size: $p-500;
+    }
+
+    /* Centering the content on large screens */
+
     .homepage-menu {
         padding-left: 20rem;
+        max-width: 1300px;
+        margin-inline: auto;
     }
 }

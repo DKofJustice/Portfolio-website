@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@700&display=swap");
-/*Project primary colors to be used*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@700&display=swap"); /*Project primary colors to be used*/
 /*Card-icon and background colors*/
 header {
   position: fixed;
+  z-index: 2000;
   left: -20rem;
   width: 20rem;
   height: 100%;
@@ -22,7 +22,7 @@ header {
 
 .header-content {
   position: relative;
-  z-index: 300;
+  z-index: 1000;
   top: 0;
   padding-left: 4rem;
 }
@@ -32,7 +32,8 @@ header {
   width: 1.8rem;
   height: 2rem;
   position: absolute;
-  right: -5rem;
+  z-index: 2000;
+  right: -6rem;
   margin-right: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -114,16 +115,23 @@ header.open-header-menu {
   outline: 2px solid white;
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 992px) {
   .mobile-menu-close {
     display: none;
   }
-
+  /* Adjusting the header for large screens */
   header {
-    left: 0;
+    left: calc(50% - 40.5rem);
     transition: none;
   }
-
+  /* Animating the header background */
+}
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  header {
+    left: 0;
+  }
+}
+@media screen and (min-width: 992px) {
   .side-bkg {
     -webkit-animation-name: hovering-around;
             animation-name: hovering-around;
@@ -134,7 +142,8 @@ header.open-header-menu {
     -webkit-animation-direction: alternate;
             animation-direction: alternate;
   }
-
+}
+@media screen and (min-width: 992px) {
   @-webkit-keyframes hovering-around {
     from {
       top: 0;
@@ -143,7 +152,6 @@ header.open-header-menu {
       top: 2rem;
     }
   }
-
   @keyframes hovering-around {
     from {
       top: 0;
@@ -153,6 +161,326 @@ header.open-header-menu {
     }
   }
 }
+.landing-section {
+  width: 100%;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.landing-section-background {
+  position: relative;
+  z-index: 200;
+  filter: blur(15px);
+  transition: filter 0.5s ease-in-out 0.1s;
+}
+
+.landing-bkg-animation {
+  filter: blur(0);
+}
+
+.landing-content {
+  position: absolute;
+  z-index: 400;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 3rem;
+}
+
+/* Adding text style */
+.landing-content h1 {
+  margin-top: 12rem;
+  color: #FFFFFF;
+  opacity: 0;
+  margin-left: -4rem;
+  transition: all 0.5s ease-in-out 0.65s;
+}
+
+.landing-content .h1-title-animation {
+  margin-left: 0;
+  opacity: 1;
+}
+
+.landing-content p {
+  margin-top: 1.6rem;
+  opacity: 0;
+  margin-left: -4rem;
+  transition: all 0.5s ease-in-out 0.8s;
+}
+
+.landing-content .p-title-animation {
+  margin-left: 0;
+  opacity: 1;
+}
+
+/* Editing the buttons */
+.landing-content button {
+  margin-top: 9rem;
+  opacity: 0;
+  background: none;
+  border: 3px solid #FFFFFF;
+  border-radius: 13px;
+  color: #FFFFFF;
+  font-family: "Playfair Display", serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.7rem;
+  padding-inline: 1.7rem;
+  padding-right: 1.4rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in 1s;
+}
+
+.landing-content button img {
+  margin-left: 1rem;
+}
+
+.landing-content .CV-animation {
+  margin-top: 7rem;
+  opacity: 1;
+}
+
+.landing-content a[href="#about-section"] {
+  margin-top: 6rem;
+  margin-inline: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.landing-content a[href="#about-section"]:hover {
+  margin-top: 6.5rem;
+}
+
+.landing-content a[href="#about-section"] img {
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out 1.4s;
+}
+
+.landing-content a[href="#about-section"] img.down-link-animation {
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .landing-content a[href="#about-section"] {
+    margin-inline: initial;
+  }
+}
+.about-section {
+  padding-inline: 3rem;
+  position: relative;
+}
+
+.about-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: -10rem;
+  background: linear-gradient(164.39deg, rgba(165, 23, 23, 0.2) 17.68%, rgba(139, 72, 72, 0) 79%);
+}
+
+.about-content {
+  opacity: 0;
+  margin-left: -2rem;
+  transition: all 0.7s ease-in-out;
+}
+
+/* Setting up animation on scroll view */
+.about-animation {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.about-section h2 {
+  margin-top: 10rem;
+}
+
+.about-section h3 {
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.about-section p {
+  margin-top: 2rem;
+  max-width: 60ch;
+  line-height: 30px;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 992px) {
+  .about-background {
+    background: none;
+  }
+}
+.services-section {
+  padding-inline: 3rem;
+  margin-left: -3rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.services-animation {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.services-section h2 {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+
+.services-section p {
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.service-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 725px) {
+  .service-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+/* Styling the cards */
+.service-card-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.service-icon {
+  width: 4rem;
+  height: 2rem;
+  position: absolute;
+  top: -1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon:before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 2rem;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.service-icon:after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 2rem;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid transparent;
+  z-index: 30;
+}
+
+.service-icon img {
+  width: 2rem;
+  height: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+.service-card-cont:nth-child(1) .service-icon {
+  background-color: #5C85A1;
+}
+
+.service-card-cont:nth-child(1) .service-icon:before {
+  border-bottom: 1rem solid #5C85A1;
+}
+
+.service-card-cont:nth-child(1) .service-icon:after {
+  border-top: 1rem solid #5C85A1;
+}
+
+.service-card-cont:nth-child(2) .service-icon {
+  background-color: #E67821;
+}
+
+.service-card-cont:nth-child(2) .service-icon:before {
+  border-bottom: 1rem solid #E67821;
+}
+
+.service-card-cont:nth-child(2) .service-icon:after {
+  border-top: 1rem solid #E67821;
+}
+
+.service-card-cont:nth-child(3) .service-icon {
+  background-color: #4969D9;
+}
+
+.service-card-cont:nth-child(3) .service-icon:before {
+  border-bottom: 1rem solid #4969D9;
+}
+
+.service-card-cont:nth-child(3) .service-icon:after {
+  border-top: 1rem solid #4969D9;
+}
+
+.service-body {
+  width: 12rem;
+  height: 18rem;
+  padding-inline: 1rem;
+  background-color: #333333;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.service-card-cont:nth-child(1) .service-body {
+  border-bottom: 1px solid #5C85A1;
+}
+
+.service-card-cont:nth-child(2) .service-body {
+  border-bottom: 1px solid #E67821;
+}
+
+.service-card-cont:nth-child(3) .service-body {
+  border-bottom: 1px solid #4969D9;
+}
+
+.service-body h3 {
+  font-size: 1.1rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.service-body p {
+  font-size: 0.8rem;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -170,20 +498,24 @@ h1, h2 {
   font-family: "Playfair Display", serif;
 }
 
+h1, h2, h3, p, a {
+  color: #FFFFFF;
+}
+
 h1 {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 p, a {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   text-decoration: none;
@@ -212,8 +544,19 @@ body::-webkit-scrollbar-thumb {
   h1 {
     font-size: 3rem;
   }
-
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p, a {
+    font-size: 1.05rem;
+  }
+  /* Centering the content on large screens */
   .homepage-menu {
     padding-left: 20rem;
+    max-width: 1300px;
+    margin-inline: auto;
   }
 }/*# sourceMappingURL=index.css.map */

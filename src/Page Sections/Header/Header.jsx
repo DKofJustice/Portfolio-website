@@ -7,6 +7,9 @@ export default function Header() {
   const [header, setHeader] = useState();
   const [sideMenuIcon, setSideMenuIcon] = useState();
 
+
+  /* Assigning the DOM with set state and useEffect hook */
+  
   useEffect(() => {
     setHeader(document.querySelector('header'));
     setSideMenuIcon(document.querySelector('.mobile-menu-close'));
@@ -25,10 +28,15 @@ export default function Header() {
     }
   };
 
+  const loadHeader = () => {
+    header.classList.add('load-header');
+  };
+
+
   return (
-    <header>
+    <header onLoad={loadHeader}>
       <div className='side-bkg'>
-        <img src={headerImage} alt="Header-background" />
+        <img draggable={false} src={headerImage} alt="Header-background" />
       </div>
       <div className='header-content'>
         <div className='mobile-menu-close' onClick={toggleSideMenu}>

@@ -1,0 +1,168 @@
+@use '../../Styles/utils' as *;
+
+.services-section {
+    padding-inline: 3rem;
+    margin-left: -3rem;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.services-animation {
+    opacity: 1;
+    margin-left: 0;
+}
+
+
+
+.services-section h2 {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+.services-section p{
+    margin-bottom: 2rem;
+    color: $secondary-text-color;
+}
+
+
+.service-cards {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 725px) {
+    .service-cards {
+        @include flex(row, flex-start, center);
+    }
+}
+
+
+/* Styling the cards */
+
+.service-card-cont {
+    @include flex(column, center, center);
+    position: relative;
+    margin-top: 2rem;
+}
+
+.service-icon {
+    width: 4rem;
+    height: 2rem;
+    position: absolute;
+    top: -1rem;
+    @include flex(column, center, center);
+}
+
+.service-icon:before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 2rem;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    
+}
+
+.service-icon:after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 2rem;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    z-index: 30;
+  
+}
+
+.service-icon img {
+    width: 2rem;
+    height: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.service-card-cont:nth-child(1) .service-icon{
+    background-color: $bkg-color-green;
+}
+
+.service-card-cont:nth-child(1) .service-icon:before{
+    border-bottom: 1rem solid $bkg-color-green;
+}
+
+.service-card-cont:nth-child(1) .service-icon:after{
+    border-top: 1rem solid $bkg-color-green;
+}
+
+
+
+.service-card-cont:nth-child(2) .service-icon{
+    background-color: $bkg-color-orange;
+}
+
+.service-card-cont:nth-child(2) .service-icon:before{
+    border-bottom: 1rem solid $bkg-color-orange;
+}
+
+.service-card-cont:nth-child(2) .service-icon:after{
+    border-top: 1rem solid $bkg-color-orange;
+}
+
+
+
+.service-card-cont:nth-child(3) .service-icon{
+    background-color: $bkg-color-blue;
+}
+
+.service-card-cont:nth-child(3) .service-icon:before{
+    border-bottom: 1rem solid $bkg-color-blue;
+}
+
+.service-card-cont:nth-child(3) .service-icon:after{
+    border-top: 1rem solid $bkg-color-blue;
+}
+
+
+
+.service-body {
+    width: 12rem;
+    height: 18rem;
+    padding-inline: 1rem;
+    background-color: $secondary-color;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.service-card-cont:nth-child(1) .service-body {
+    border-bottom: 1px solid $bkg-color-green;
+}
+
+.service-card-cont:nth-child(2) .service-body {
+    border-bottom: 1px solid $bkg-color-orange;
+}
+
+.service-card-cont:nth-child(3) .service-body {
+    border-bottom: 1px solid $bkg-color-blue;
+}
+
+
+
+.service-body h3 {
+    font-size: 1.1rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: $primary-text-color;
+}
+
+.service-body p {
+    font-size: 0.8rem;
+    line-height: 22px;
+    letter-spacing: .4px;
+}

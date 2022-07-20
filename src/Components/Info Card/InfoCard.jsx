@@ -1,15 +1,15 @@
 import React from 'react'
 
-export default function InfoCard() {
+export default function InfoCard({ image, header, text, cardType }) {
   return (
-    <div className='service-card-cont'>
+    <div className={`service-card-cont ${cardType}`}>
         <div className='service-icon'>
-            <img src="" alt="" />
+            <img src={image} alt="card-icon" />
         </div>
 
         <div className='service-body'>
-            <h3>Software</h3>
-            <p>Software</p>
+            <h3>{header}</h3>
+            <p>{text}</p>
         </div>
     </div>
   )

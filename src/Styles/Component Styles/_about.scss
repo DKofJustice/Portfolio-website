@@ -1,0 +1,53 @@
+@use '../../Styles/utils' as *;
+
+.about-section {
+    padding-inline: 3rem;
+    position: relative;
+}
+
+.about-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: -10rem;
+    background: linear-gradient(164.39deg, rgba(165, 23, 23, 0.2) 17.68%, rgba(139, 72, 72, 0) 79%);
+}
+
+.about-content {
+    opacity: 0;
+    margin-left: -2rem;
+    transition: all 0.7s ease-in-out;
+}
+
+/* Setting up animation on scroll view */
+
+.about-animation {
+    opacity: 1;
+    margin-left: 0;
+}
+
+
+.about-section h2 {
+    margin-top: 10rem;
+}
+
+.about-section h3 {
+    margin-top: 2rem;
+    color: $secondary-text-color;
+}
+
+.about-section p {
+    margin-top: 2rem;
+    max-width: 60ch;
+    line-height: 30px;
+    margin-bottom: 2rem;
+    color: $secondary-text-color;
+}
+
+@media screen and (min-width: 992px) {
+    .about-background {
+        background: none;
+    }
+}
