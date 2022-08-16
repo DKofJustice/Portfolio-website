@@ -1,4 +1,3 @@
-import './App.css';
 import Homepage from './Pages/Homepage';
 import Header from './Page Sections/Header/Header';
 

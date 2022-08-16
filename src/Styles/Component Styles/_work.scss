@@ -1,0 +1,67 @@
+@use '../../Styles/utils' as *;
+
+.work-section {
+    padding-top: 10rem;
+    padding-inline: 3rem;
+    opacity: 0;
+    transform: translateY(-4rem);
+    transition: all 0.5s ease-in-out;
+}
+
+.work-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+.workplace {
+    max-width: 38rem;
+    margin-top: 4rem;
+    border-bottom: 2px solid $secondary-text-color;
+}
+
+.company-city-time {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.company-city-time, .company-and-city, .company-and-city > *  {
+    @include flex(row, flex-start, center);
+}
+
+@media  (max-width: 560px) {
+    .company-city-time {
+        @include flex(column, flex-start, flex-start);
+    }
+}
+
+
+
+.company-and-city > *:nth-child(2) {
+    margin-left: 3rem;
+}
+
+.company-and-city > * > img {
+    margin-bottom: 1rem;
+}
+
+.company-and-city > * > p {
+    margin-left: 1rem;
+}
+
+
+
+.company-city-time > p {
+    margin-left: auto;
+}
+
+@media  (max-width: 560px) {
+    .company-city-time > p {
+        margin-left: 2.2rem;
+    }
+}

@@ -38,8 +38,10 @@ export default function Services() {
       <div className='service-cards'>
           {
             // InfoCard component is found in the Components/Info Card folder
-            serviceCards.map(serviceCard => <InfoCard image={serviceCard.cardImage}
-              header={serviceCard.header} text={serviceCard.text}
+            serviceCards.map(serviceCard => <InfoCard 
+              image={serviceCard.cardImage}
+              header={serviceCard.header} 
+              text={serviceCard.text}
               cardType={serviceCard.cardType}/>)
           }
       </div>

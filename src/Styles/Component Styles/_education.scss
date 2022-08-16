@@ -1,0 +1,57 @@
+@use '../../Styles/utils' as *;
+
+.education-section {
+    padding-top: 10rem;
+    padding-inline: 3rem;
+    opacity: 0;
+    margin-left: -4rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.education-animation {
+    opacity: 1;
+    margin-left: 0;
+}
+
+
+
+
+.education-level {
+    max-width: 38rem;
+    margin-top: 4rem;
+    padding-bottom: 1.3rem;
+    border-bottom: 2px solid $secondary-text-color;
+}
+
+
+
+
+.education-content {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    margin-top: 4rem
+}
+
+.highschool-location {
+    @include flex(row, flex-start, center);
+    margin-bottom: 0;
+}
+
+.highschool-location > img {
+    margin-bottom: 1rem;
+}
+
+.highschool-location > p {
+    max-width: 30ch;
+    margin-left: 1rem;
+}
+
+.education-content > p {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 560px) {
+    .education-content > p {
+        margin-left: 2.8rem;
+    }
+}

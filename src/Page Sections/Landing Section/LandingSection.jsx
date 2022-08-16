@@ -1,6 +1,6 @@
 import React from 'react';
 import LandingBackground from '../../Assets/Images/Background.jpg';
-import DownloadIcon from '../../Assets/Icons/akar-icons_download.svg';
+//import DownloadIcon from '../../Assets/Icons/akar-icons_download.svg';
 import DownArrow from '../../Assets/Icons/Down Arrow.svg';
 import { useRef, useState, useEffect } from 'react';
 
@@ -53,11 +53,13 @@ export default function LandingSection() {
           I create web apps for you
         </p>
 
+        {/*
         <button
         className={ isIntersecting ? 'CV-animation' : '' }>
           Download CV
           <img src={DownloadIcon} alt="download-icon" />
         </button>
+        */}
 
         <a href="#about-section">
           <img className={ isIntersecting ? 'down-link-animation' : '' }

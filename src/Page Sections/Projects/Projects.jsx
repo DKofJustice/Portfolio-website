@@ -8,13 +8,21 @@ export default function Projects() {
       <h2>Projects</h2>
 
       <div className='project-list'>
-        <div className='project project-1'>
-          <img src={MexicanDishImage} alt="mexican dish" />
-        </div>
+        <a href="https://hilarious-pothos-b8ec37.netlify.app/"
+        target='_blank' rel='noreferrer'>
+          <div className='project project-1'>
+            <span className='tooltiptext'>Check out the mexican restaurant website</span>
+            <img src={MexicanDishImage} alt="mexican dish" />
+          </div>
+        </a>
 
-        <div className='project project-2'>
-          <img src={CalculatorImage} alt="Calculator" />
-        </div>
+        <a href="https://alex-calculator.netlify.app/"
+        target='_blank' rel='noreferrer'>
+          <div className='project project-2'>
+            <span className='tooltiptext'>Check out the calculator website</span>
+            <img src={CalculatorImage} alt="Calculator" />
+          </div>
+        </a>
       </div>
     </article>
   )

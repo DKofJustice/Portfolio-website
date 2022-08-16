@@ -1,0 +1,60 @@
+.projects-section {
+    padding-top: 10rem;
+    padding-inline: 3rem;
+}
+
+.project-list {
+    margin-top: 4rem;
+    width: 400px;
+}
+
+.project-list .project {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    z-index: 30;
+}
+
+.project-list .project img {
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.project-list .project:hover img {
+    opacity: .3;
+}
+
+
+
+
+
+.tooltiptext {
+    opacity: 0;
+    width: 12rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: black;
+    font-size: 0.9rem;
+    position: absolute;
+    z-index: 50;
+    top: 20%;
+    left: 50%;
+    margin-left: -6rem;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.project-list .project:hover .tooltiptext {
+    opacity: 1;
+}

@@ -1,6 +1,8 @@
 {
-  "name": "portfolio-websites",
-  "version": "0.1.0",
+  "name": "alex-benta-portfolio",
+  "homepage": "http://alexbenta.com/",
+  "description": "Personal portfolio website",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

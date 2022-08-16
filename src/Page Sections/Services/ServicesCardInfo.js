@@ -6,12 +6,12 @@ const serviceCards = [
     text: 'I design the layout reference for the project, so it can be satisfactory according to the customers tastes, but also to be visually appealing'
   },
 
-  {
-    cardType: 'Mobile Apps',
-    cardImage: require('./../../Assets/Icons/clarity_mobile-phone-line.svg').default,
-    header: 'Mobile Apps',
-    text: 'Separated they live in Bookmarksgrove right at the coast of the Semantics'
-  },
+  //{
+  //  cardType: 'Mobile Apps',
+  //  cardImage: require('./../../Assets/Icons/clarity_mobile-phone-line.svg').default,
+  //  header: 'Mobile Apps',
+  //  text: 'Separated they live in Bookmarksgrove right at the coast of the Semantics'
+  //},
 
   {
     cardType: 'Development',

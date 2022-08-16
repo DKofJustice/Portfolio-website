@@ -1,0 +1,108 @@
+@use '../../Styles/utils' as *;
+
+footer {
+    padding-block: 10rem;
+    padding-inline: 3rem;
+}
+
+footer > p {
+    margin-top: 4rem;
+}
+
+
+
+
+.contact-list {
+    margin-top: 4rem;
+}
+
+.contact-list > * {
+    @include flex(row, flex-start, center);
+}
+
+.contact-list > * > img {
+    width: 1.5rem;
+    height: 100%;
+}
+
+.contact-list > * > p {
+    margin-bottom: 0;
+    margin-left: 1.5rem;
+}
+
+
+
+
+.social-list {
+    margin-top: 4rem;
+    @include flex(row, flex-start, center);
+}
+
+.social-list > * {
+    background-color: $secondary-color;
+    width: 2rem;
+    height: 2rem;
+    @include flex(row, center, center);
+    border-radius: 50%;
+}
+
+.social-list > *:not(.social-list > *:first-child) {
+    margin-left: 0.5rem;
+}
+
+.social-list > * img {
+    width: 1rem;
+    height: 100%;
+    @include flex(row, center, center);
+}
+
+
+
+.form-success-message {
+    margin-top: 4rem;
+    width: 23rem;
+}
+
+#contact-form {
+    width: 23rem;
+    margin-top: 2rem;
+}
+
+#contact-form input {
+    width: 100%;
+    background-color: $secondary-color;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    background-color: $secondary-color;
+    color: $secondary-text-color;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: $secondary-text-color;
+    font-size: 0.9rem;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    max-height: 300px;
+}
+
+#contact-form > button {
+    font-weight: 700;
+    color: $primary-text-color;
+    background-color: $secondary-color-red;
+    border: none;
+    border-radius: 10px;
+    padding-block: 0.8rem;
+    padding-inline: 2rem;
+    cursor: pointer;
+}

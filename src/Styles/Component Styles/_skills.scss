@@ -1,0 +1,100 @@
+@use '../../Styles/utils' as *;
+
+.skills-section {
+    padding-top: 10rem;
+    padding-inline: 3rem;
+    opacity: 0;
+    margin-left: -3rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.skills-animation {
+    opacity: 1;
+    margin-left: 0;
+}
+
+
+
+.skills-section .skills-subtitle {
+    margin-top: 2rem;
+    max-width: 60ch;
+    line-height: 30px;
+}
+
+.skill-card-div {
+    margin-top: 4rem;
+    @include flex(row, center, center);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Customizing the cards */
+
+.skill-card-cont {
+    position: relative;
+    @include flex(column, center, center);
+    margin-top: 2rem;
+}
+
+.skill-card-title, .skill-card-body {
+    border-radius: 15px;
+}
+
+.skill-card-title {
+    position: absolute;
+    width: 8rem;
+    height: 4rem;
+    top: -2rem;
+    @include flex(column, center, center);
+}
+
+.skill-card-title p {
+    margin-bottom: 0;
+}
+
+.Advanced .skill-card-title{
+    background-color: $bkg-color-orange;
+}
+
+.Medium .skill-card-title{
+    background-color: $secondary-color-red;
+}
+
+.Beginner .skill-card-title{
+    background-color: $bkg-color-light-green;
+}
+
+
+
+.skill-card-body {
+    width: 24rem;
+    min-height: 6rem;
+    background-color: $bkg-grey;
+}
+
+.Advanced .skill-card-body {
+    border-bottom: 2px solid $bkg-color-orange;
+}
+
+.Medium .skill-card-body {
+    border-bottom: 2px solid $secondary-color-red;
+}
+
+.Beginner .skill-card-body {
+    border-bottom: 2px solid $bkg-color-light-green;
+}
+
+
+
+.skill-list {
+    @include flex(row, flex-start, center);
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 4rem 3rem 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    .skill-card-div {
+        @include flex(column, flex-start, flex-start);
+    }
+}

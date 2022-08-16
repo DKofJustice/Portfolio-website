@@ -1,6 +1,7 @@
 @use '../../Styles/utils' as *;
 
 .about-section {
+    padding-top: 10rem;
     padding-inline: 3rem;
     position: relative;
 }
@@ -30,7 +31,7 @@
 
 
 .about-section h2 {
-    margin-top: 10rem;
+    //margin-top: 10rem;
 }
 
 .about-section h3 {
