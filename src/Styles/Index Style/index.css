@@ -712,14 +712,26 @@ header.open-header-menu {
 .project-list {
   margin-top: 4rem;
   width: 400px;
+  margin-inline: auto;
+}
+@media (min-width: 767px) {
+  .project-list {
+    margin-inline: 0;
+  }
 }
 
 .project-list .project {
-  width: 400px;
+  width: 19rem;
   height: 300px;
   overflow: hidden;
   position: relative;
   z-index: 30;
+}
+@media (min-width: 767px) {
+  .project-list .project {
+    width: 400px;
+    height: 300px;
+  }
 }
 
 .project-list .project img {
@@ -729,6 +741,13 @@ header.open-header-menu {
 
 .project-list .project:hover img {
   opacity: 0.3;
+}
+
+.project-3 img {
+  position: absolute;
+  left: -20rem;
+  top: -10rem;
+  transform: scale(0.6);
 }
 
 .tooltiptext {
@@ -926,6 +945,7 @@ p, a, li {
 project window*/
 .App-container {
   background-color: #222222;
+  overflow-x: hidden;
 }
 
 /*Styling the scrollbar*/

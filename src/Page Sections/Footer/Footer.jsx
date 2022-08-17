@@ -2,6 +2,7 @@ import React from 'react';
 import EmailIcon from '../../Assets/Icons/eva_email-outline.svg';
 import FacebookIcon from '../../Assets/Icons/dashicons_facebook-alt.svg';
 import LinkedinIcon from '../../Assets/Icons/akar-icons_linkedin-box-fill.svg';
+import DribbbleIcon from '../../Assets/Icons/akar-icons_dribbble-fill.svg';
 
 export default function Footer() {
 
@@ -62,6 +63,13 @@ export default function Footer() {
         target='_blank' rel='noreferrer'>
           <div className='linkedin-link'>
             <img src={LinkedinIcon} alt="linkedin-link" />
+          </div>
+        </a>
+
+        <a href="https://dribbble.com/tahu2332/"
+        target='_blank' rel='noreferrer'>
+          <div className='dribbble-link'>
+            <img src={DribbbleIcon} alt="dribbble-link" />
           </div>
         </a>
       </div>

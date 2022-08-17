@@ -47,7 +47,8 @@ project window*/
 
 
 .App-container {
-    background-color: $primary-color;   
+    background-color: $primary-color;
+    overflow-x: hidden;
 }
 
 /*Styling the scrollbar*/

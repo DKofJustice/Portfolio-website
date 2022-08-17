@@ -13,8 +13,8 @@ export default function Homepage() {
   return (
     <div className='homepage-menu'>
       <LandingSection/>
-      <AboutSection/>
       <Services/>
+      <AboutSection/>
       <Skills/>
       <Education/>
       <Experience/>
